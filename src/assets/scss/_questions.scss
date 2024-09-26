@@ -3,13 +3,12 @@
   width: 1200px;
   margin: 0 auto;
 
-
   &__title {
     color: #1E1E1E;
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
-    line-height: 110%; /* 55px */
+    line-height: 110%;
     margin-bottom: 30px;
   }
 
@@ -23,7 +22,7 @@
   &__item {
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
     width: 530px;
     padding: 30px;
     border-radius: 20px;
@@ -39,14 +38,11 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 110%; /* 19.8px */
-    //svg{
-    //  margin-left: 30px;
-    //}
+    line-height: 110%;
   }
 
   &__icon {
-   margin-left: 30px;
+    margin-left: 30px;
   }
 
   &__answer {
@@ -55,77 +51,36 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 19.5px */
+    line-height: 130%;
   }
 }
-//
-//.faq {
-//  width: 1200px;
-//  margin: 0 auto;
-//
-//  &__title {
-//    font-size: 2rem;
-//    font-weight: bold;
-//    text-align: center;
-//    margin-bottom: 30px;
-//  }
-//
-//  /* Контейнер для елементів у рядок */
-//  display: flex;
-//  flex-wrap: wrap; /* Додаємо можливість переносу на новий рядок, якщо ширина не дозволяє */
-//  gap: 20px; /* Простір між елементами */
-//
-//  &__item {
-//    background-color: #f9f9f9;
-//    padding: 20px;
-//    border-radius: 8px;
-//    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//    cursor: pointer;
-//    transition: height 0.3s ease; /* Плавний перехід висоти */
-//    width: calc(46% - 20px); /* Кожен елемент займає половину ширини з урахуванням простору між ними */
-//    overflow: hidden;
-//    position: relative;
-//
-//    /* Для адаптивності, якщо ширина менша, ніж планшет */
-//    @media (max-width: 768px) {
-//      width: 100%; /* На вузьких екранах займає всю ширину */
-//    }
-//
-//    /* Фіксована висота для прихованих айтемів */
-//    height: 60px;
-//    overflow: hidden;
-//
-//    &--active {
-//      height: auto; /* Знімаємо фіксовану висоту для активних айтемів */
-//    }
-//  }
-//
-//  &__question {
-//    display: flex;
-//    justify-content: space-between;
-//    align-items: center;
-//    font-size: 1.1rem;
-//    font-weight: bold;
-//  }
-//
-//  &__icon {
-//    font-size: 2rem;
-//    color: #3b55e6;
-//  }
-//
-//  &__answer {
-//    display: none; /* Спочатку відповіді приховані */
-//
-//    &--visible {
-//      display: block; /* Відображаємо контент для активного айтема */
-//      padding-top: 10px;
-//      transition: opacity 0.3s ease;
-//      opacity: 1;
-//    }
-//
-//    &--hidden {
-//      opacity: 0;
-//      transition: opacity 0.3s ease;
-//    }
-//  }
-//}
+
+@media (max-width: 1200px) {
+  .faq {
+    padding: 40px 0;
+    width: 100%;
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__group {
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__item {
+      width: 80%;
+    }
+
+    &__question {
+      font-size: 16px;
+    }
+
+    &__answer {
+      font-size: 14px;
+    }
+  }
+}

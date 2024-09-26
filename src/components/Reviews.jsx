@@ -1,92 +1,7 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation } from "swiper/modules";
-// import React, {useRef, useState} from "react";
-//
-//
-// const reviews = [
-//   {
-//     title: "R&D Services for a Legal Solutions Company",
-//     rating: 5,
-//     review: `"Avenga's (formerly Core Value Inc) strength lies in their collaborative spirit and innovative approach. Avenga excels in developing state-of-the-art software with minimal supervision. Their disciplined team swiftly addresses any web-related challenges, showcasing their expertise."`,
-//   },
-//   {
-//     title: "Engineering Staff Augmentation & Consulting for an IT Company",
-//     rating: 5,
-//     review: `"As trust developed, the team began making significant contributions across various areas. Avenga (formerly Perfectial) has provided staff who have become integral to the company’s IT operations, demonstrating a strong commitment to supporting the client’s needs."`,
-//   },
-//   {
-//     title: "Custom Software Development for Financial Services",
-//     rating: 4,
-//     review: `"The team at Avenga delivered the project on time and within budget. Their development process was transparent, and the communication was outstanding. We are happy with the results and look forward to future cooperation."`,
-//   },
-//   {
-//     title: "Custom Software Development for Financial Services",
-//     rating: 4,
-//     review: `"The team at Avenga delivered the project on time and within budget. Their development process was transparent, and the communication was outstanding. We are happy with the results and look forward to future cooperation."`,
-//   }
-// ];
-//
-// const Reviews = () => {
-//     const [currentSlide, setCurrentSlide] = useState(1);
-//       const swiperRef = useRef(null);
-//    const updateCurrentSlide = (swiper) => {
-//     setCurrentSlide(swiper.activeIndex + 1);
-//   };
-//    const handlePrev = () => {
-//     if (swiperRef.current) swiperRef.current.slidePrev();
-//   };
-//      // const groupedSlides = groupSlides(slides, 3);
-//
-//   const handleNext = () => {
-//     if (swiperRef.current) swiperRef.current.slideNext();
-//   };
-//   return (
-//     <section className="reviews">
-//       <div className="reviews__header">
-//         <h2 className="reviews__title">Reviews</h2>
-//         <p className="reviews__subtitle">
-//           Avenga specializes in comprehensive IT transformation services, driving significant cost-efficiency through effective technology implementation.
-//         </p>
-//       </div>
-//
-//       <Swiper
-//         spaceBetween={30}
-//         slidesPerView={2}  // Відображаємо по 2 відгуки
-//         navigation={true}
-//          onSlideChange={(swiper) => updateCurrentSlide(swiper)}
-//         modules={[Navigation]}
-//         className="reviews__swiper"
-//       >
-//         {reviews.map((review, index) => (
-//           <SwiperSlide key={index}>
-//             <div className="reviews__card">
-//               <h3 className="reviews__card-title">{review.title}</h3>
-//               <div className="reviews__card-rating">
-//                 {Array.from({ length: review.rating }).map((_, i) => (
-//                   <span key={i}>⭐</span>
-//                 ))}
-//               </div>
-//               <p className="reviews__card-text">{review.review}</p>
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-//
-//     <div className="pagination">
-//           <button className="prev-slide" onClick={handlePrev}>←</button>
-//           <div className="span">{currentSlide}/{reviews.length}</div>
-//           <button className="next-slide" onClick={handleNext}>→</button>
-//         </div>
-//     </section>
-//   );
-// };
-//
-// export default Reviews;
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import React, {useRef, useState} from "react";
-// import "swiper/swiper-bundle.min.css"; // Підключення стилів Swiper
-// import "./Reviews.scss"; // Підключення ваших стилів
+
 
 const reviews = [
   {
@@ -111,7 +26,6 @@ const reviews = [
   },
 ];
 
-// Функція для групування слайдів по 2
 const groupSlides = (slidesArray, itemsPerGroup) => {
   const grouped = [];
   for (let i = 0; i < slidesArray.length; i += itemsPerGroup) {
@@ -123,12 +37,10 @@ const groupSlides = (slidesArray, itemsPerGroup) => {
 const Reviews = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const swiperRef = useRef(null);
-
-  // Групуємо слайди по 2 об'єкти
   const groupedReviews = groupSlides(reviews, 2);
 
   const updateCurrentSlide = (swiper) => {
-    setCurrentSlide(swiper.activeIndex + 1); // Оновлюємо нумерацію
+    setCurrentSlide(swiper.activeIndex + 1);
   };
 
   const handlePrev = () => {
@@ -151,11 +63,11 @@ const Reviews = () => {
         </div>
 
         <Swiper
-          onSwiper={(swiper) => (swiperRef.current = swiper)} // Прив'язка рефу до Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           spaceBetween={30}
-          slidesPerView={1} // Відображаємо по 1 групі (група може містити 2 слайди)
+          slidesPerView={1}
           onSlideChange={(swiper) => updateCurrentSlide(swiper)}
-          navigation={true} // Вбудовані кнопки навігації
+          navigation={true}
           modules={[Navigation]}
           className="reviews__swiper"
         >

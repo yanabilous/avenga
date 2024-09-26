@@ -92,7 +92,7 @@ const Blog = () => {
           navigation={true}
           onSlideChange={(swiper) => updateCurrentSlide(swiper)}
           modules={[Navigation]}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}  // Додаємо референс на Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {groupedSlides.map((group, index) => (
             <SwiperSlide key={index}>

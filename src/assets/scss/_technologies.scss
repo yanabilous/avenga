@@ -10,16 +10,13 @@
   &__title {
     color: #1E1E1E;
     font-size: 50px;
-    font-style: normal;
     font-weight: 800;
-    line-height: 110%; /* 55px */
   }
 
   &__tabs {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-
   }
 
   &__tab {
@@ -30,10 +27,8 @@
     background: none;
     color: #1E1E1E;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
     border: none;
-    line-height: normal;
     cursor: pointer;
     border-bottom: 3px solid transparent;
     transition: border-color 0.3s;
@@ -52,9 +47,7 @@
   &__description {
     color: #1E1E1E;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 23.4px */
     margin-bottom: 20px;
     margin-right: 80px;
   }
@@ -80,26 +73,20 @@
     &-value {
       color: #FFF;
       font-size: 50px;
-      font-style: normal;
       font-weight: 700;
-      line-height: 110%; /* 55px */
     }
 
     &-description {
       color: #FFF;
       text-align: center;
       font-size: 15px;
-      font-style: normal;
       font-weight: 400;
-      line-height: 130%; /* 19.5px */
     }
   }
 
   &__explore-button {
-    //margin-top: 20px;
     width: 185px;
     height: 57px;
-    flex-shrink: 0;
     color: white;
     border: none;
     border-radius: 50px;
@@ -109,6 +96,66 @@
 
     &:hover {
       background-color: #6546e8;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .technologies__left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .technologies {
+    overflow: hidden;
+    align-items: center;
+    width: 80%;
+    padding: 40px 20px;
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__tab {
+      width: auto;
+      margin: 5px 0;
+      font-size: 18px;
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__description {
+      margin-right: 0;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    &__stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__stat {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__explore-button {
+      width: 100%;
+      max-width: 185px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+
     }
   }
 }

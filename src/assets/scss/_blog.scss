@@ -1,15 +1,48 @@
-.carousel-full{
+.carousel-full {
   width: 1200px;
-  &__title{
+  padding-bottom: 80px;
+
+  &__title {
     padding-bottom: 30px;
   }
-  .pagination{
+
+  .pagination {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
   }
 }
-.card-group{
+
+.card-group {
   display: flex;
   width: 1200px;
   gap: 20px;
+}
+
+
+@media (max-width: 1200px) {
+  .carousel-container {
+    align-items: center;
+    padding: 0;
+  }
+  .carousel-full {
+    width: 100%;
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .pagination {
+      margin-top: 20px;
+    }
+  }
+
+  .card-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
 }

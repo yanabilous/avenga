@@ -2,27 +2,15 @@ import React, {useState} from "react";
 
 
 const Questions = () => {
-  const [activeIndexes, setActiveIndexes] = useState([]); // Масив для збереження індексів відкритих елементів
+  const [activeIndexes, setActiveIndexes] = useState([]);
 
   const toggleFAQ = (index) => {
     if (activeIndexes.includes(index)) {
-      // Якщо індекс вже є в активних, зняти його
       setActiveIndexes(activeIndexes.filter((i) => i !== index));
     } else {
-      // Інакше додати індекс до активних
       setActiveIndexes([...activeIndexes, index]);
     }
   };
-
-  // const [activeIndex, setActiveIndex] = useState(null);
-  //
-  // const toggleFAQ = (index) => {
-  //   if (activeIndex === index) {
-  //     setActiveIndex(null); // Якщо клікнули на активний, згорнути його
-  //   } else {
-  //     setActiveIndex(index); // Інакше розгорнути новий
-  //   }
-  // };
 
   const faqs = [
     {

@@ -2,14 +2,13 @@
   width: 387px;
   display: flex;
   flex-direction: column;
-  //padding-top: 80px;
-  padding-bottom: 80px;
 
   &__image {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 20px;
+    margin-bottom: 15px;
   }
 
   &__title {
@@ -23,7 +22,7 @@
     border-radius: 50px;
     background: rgba(86, 70, 204, 0.20);
     height: 40px;
-    margin-top: 15px;
+    margin-bottom: 15px;
     max-width: 100%;
   }
 
@@ -47,16 +46,15 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 130%;
-    //max-height: 0;
     overflow: hidden;
     margin-top: 15px;
     margin-bottom: 20px;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; /* Додаємо padding до анімації */
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
 
   &__text--expanded {
-    max-height: 500px; /* Тут значення більше, щоб побачити весь текст, або використовувати динамічну висоту */
-    padding: 10px 0; /* Показує відступ, коли текст відкритий */
+    max-height: 500px;
+    padding: 10px 0;
   }
 
   &__actions {
@@ -70,8 +68,9 @@
     font-weight: 700;
     border: none;
     cursor: pointer;
-    svg{
-       margin-left: 10px;
+
+    svg {
+      margin-left: 10px;
     }
   }
 }

@@ -75,7 +75,8 @@ const Technologies = () => {
       <div className="technologies__content">
         <div className="technologies__left">
           <p className="technologies__description">{tabData[activeTab].description}</p>
-          <button className="technologies__explore-button">Explore <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <button className="technologies__explore-button">Explore <svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                                                        height="14" viewBox="0 0 14 14" fill="none">
             <g clipPath="url(#clip0_0_384)">
               <path
                 d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"

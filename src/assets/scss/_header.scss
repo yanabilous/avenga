@@ -1,6 +1,7 @@
-.border{
-    border-bottom: 1px solid #1E1E1E26;
+.border {
+  border-bottom: 1px solid #1E1E1E26;
 }
+
 .header {
   margin: 0 auto;
   display: flex;
@@ -8,10 +9,17 @@
   align-items: center;
   padding: 10px 0;
   width: 1200px;
+  padding-top: 20px;
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+  }
 
   &__logo {
-    font-size: 24px;
-    font-weight: bold;
+    max-width: 234px;
+    display: flex;
+    align-items: center;
   }
 
   &__menu {
@@ -35,13 +43,22 @@
     }
 
     .menu__select {
+      color: #1E1E1E;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-left: 40px;
+
       select {
-        padding: 5px;
         font-size: 14px;
-        border: none; /* Прибираємо бордер */
-        background-color: transparent; /* Робимо фон прозорим для більш чистого вигляду */
-        outline: none; /* Прибираємо рамку при фокусі */
-        //appearance: none; /* Прибираємо стандартний вигляд браузера (для деяких браузерів) */
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 5px;
+        border: none;
+        background-color: transparent;
+        outline: none;
         cursor: pointer;
       }
     }
@@ -53,11 +70,12 @@
 
     .search__icon {
       cursor: pointer;
-      width: 24px;
-      height: 24px;
     }
 
     .search__input {
+      position: absolute;
+      bottom: -10px;
+      left: -20px;
       padding: 5px;
       font-size: 14px;
       border: 1px solid #ccc;
@@ -66,3 +84,52 @@
     }
   }
 }
+
+@media (max-width: 1199px) {
+  .header {
+    //margin: 10px;
+    width: 100%;
+
+    &__burger {
+      display: block;
+    }
+
+    &__menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      flex-direction: column;
+      //align-items: flex-start;
+      padding: 10px;
+      gap: 15px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(-100%); /* Сховати меню за екраном */
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 20px;
+      }
+
+      .menu__select {
+        margin: 0;
+      }
+    }
+
+    &__menu.open {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(0); /* Відобразити меню при відкритті */
+    }
+  }
+}
+

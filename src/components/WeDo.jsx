@@ -3,17 +3,34 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import {Navigation} from "swiper/modules";
+import person from "../assets/images/manGreen.png";
+import fone from "../assets/images/fone.png";
 
 const WeDo = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const swiperRef = useRef(null);
 
   const slides = [
-    {title: "Technology Solution Discovery", text: "Transform your business idea into a well-executed project. After thorough analysis and validation of your concept, we will identify a tailored technology suite that aligns with your business objectives. From the start, we ensure cost-efficiency, exceptional quality, and technical excellence."},
-    {title: "Solution audit", text: "An underperforming solution is more of a liability than an asset. Discover what's hindering your software with our solution audit services. Our experts will thoroughly evaluate your system and provide a detailed report of issues affecting its performance."},
-    {title: "Modernization discovery", text: "Staying competitive requires moving beyond legacy platforms. We'll thoroughly analyze your current system to identify areas for improvement and modernization. Additionally, we'll offer recommendations for implementing these changes efficiently and with minimal disruption to your business."},
-    {title: "Migration discovery", text: "An outdated infrastructure can hold back your business performance. Upgrade to a modern, secure environment with our consulting services. Avenga's experts will evaluate your app’s readiness for migration and create a detailed plan to ensure a smooth, predictable transition with minimal downtime."},
-    {title: "Capability enablement", text: "If your delivery system is missing certain essential components, we can seamlessly and efficiently integrate them into your ecosystem. Avenga helps companies provide the solutions their clients need by ensuring smooth operation throughout the entire software development lifecycle."},
+    {
+      title: "Technology Solution Discovery",
+      text: "Transform your business idea into a well-executed project. After thorough analysis and validation of your concept, we will identify a tailored technology suite that aligns with your business objectives. From the start, we ensure cost-efficiency, exceptional quality, and technical excellence."
+    },
+    {
+      title: "Solution audit",
+      text: "An underperforming solution is more of a liability than an asset. Discover what's hindering your software with our solution audit services. Our experts will thoroughly evaluate your system and provide a detailed report of issues affecting its performance."
+    },
+    {
+      title: "Modernization discovery",
+      text: "Staying competitive requires moving beyond legacy platforms. We'll thoroughly analyze your current system to identify areas for improvement and modernization. Additionally, we'll offer recommendations for implementing these changes efficiently and with minimal disruption to your business."
+    },
+    {
+      title: "Migration discovery",
+      text: "An outdated infrastructure can hold back your business performance. Upgrade to a modern, secure environment with our consulting services. Avenga's experts will evaluate your app’s readiness for migration and create a detailed plan to ensure a smooth, predictable transition with minimal downtime."
+    },
+    {
+      title: "Capability enablement",
+      text: "If your delivery system is missing certain essential components, we can seamlessly and efficiently integrate them into your ecosystem. Avenga helps companies provide the solutions their clients need by ensuring smooth operation throughout the entire software development lifecycle."
+    },
   ];
 
   const updateCurrentSlide = (swiper) => {
@@ -31,8 +48,8 @@ const WeDo = () => {
   return (
     <div className="carousel-container">
       <div className="carousel-left">
-        <h2 className='carousel-left__title'>What We Do</h2>
-        <p className='carousel-left__text'>
+        <h2 className="carousel-left__title">What We Do</h2>
+        <p className="carousel-left__text">
           Avenga specializes in comprehensive IT transformation services, driving significant cost-efficiency through
           effective technology implementation.
         </p>
@@ -43,12 +60,12 @@ const WeDo = () => {
           navigation={true}
           onSlideChange={(swiper) => updateCurrentSlide(swiper)}
           modules={[Navigation]}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}  // Додаємо референс на Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <h3 className='swiper_title'>{slide.title}</h3>
-              <p className='swiper_text'>{slide.text}</p>
+              <h3 className="swiper_title">{slide.title}</h3>
+              <p className="swiper_text">{slide.text}</p>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -61,7 +78,7 @@ const WeDo = () => {
                 fill="#5646CC"/>
             </svg>
           </button>
-          <div className='span'>{currentSlide}/{slides.length}</div>
+          <div className="span">{currentSlide}/{slides.length}</div>
           <button className="next-slide" onClick={handleNext}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path
@@ -73,14 +90,21 @@ const WeDo = () => {
       </div>
 
       <div className="carousel-right">
-        <img
-          src="https://via.placeholder.com/400"
-          alt="Person"
-          className="carousel-image"
-        />
+        <div className="person-group">
+          <img
+            src={fone}
+            alt="fone"
+            className="carousel-image"
+          />
+          <img
+            src={person}
+            alt="person"
+            className=" person"
+          />
+        </div>
         <div className="person-info">
-          <h4>John Doe</h4>
-          <p>Position: CEO</p>
+          <h4>Mykhailo Romanchenko</h4>
+          <p>Director of Technology Consulting</p>
         </div>
       </div>
     </div>

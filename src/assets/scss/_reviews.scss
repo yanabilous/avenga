@@ -25,7 +25,7 @@
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
-    line-height: 110%; /* 55px */
+    line-height: 110%;
     margin-bottom: 15px;
   }
 
@@ -33,7 +33,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 20.8px */
+    line-height: 130%;
   }
 
   &__swiper {
@@ -53,7 +53,7 @@
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
-    line-height: 110%; /* 24.2px */
+    line-height: 110%;
     margin-bottom: 10px;
   }
 
@@ -62,7 +62,8 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 19.5px */
+    line-height: 130%;
+
     svg {
       margin-right: 5px;
     }
@@ -82,8 +83,46 @@
     .prev-slide, .next-slide {
       background: none;
       cursor: pointer;
+    }
+  }
+}
 
-      //margin: 0 10px;
+
+@media (max-width: 1200px) {
+  .reviews {
+    padding: 20px 0;
+
+    &__wrapper {
+      width: 80%;
+    }
+
+    &__header {
+      width: 100%;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__group {
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__card {
+      width: 80%;
+    }
+
+    &__card-title {
+      font-size: 20px;
+    }
+
+    &__card-rating, &__card-text {
+      font-size: 14px;
     }
   }
 }

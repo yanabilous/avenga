@@ -4,6 +4,8 @@
   padding: 20px;
   width: 1200px;
   padding-top: 80px;
+  padding-bottom: 0;
+  overflow: hidden;
 }
 
 .carousel-left {
@@ -11,6 +13,7 @@
   flex-direction: column;
   align-items: start;
   width: 60%;
+  padding-bottom: 50px;
 
   .swiper {
     width: 590px;
@@ -21,14 +24,14 @@
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
-    line-height: 110%; /* 55px */
+    line-height: 110%;
   }
 
   &__text {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 20.8px */
+    line-height: 130%;
     margin-top: 15px;
     margin-bottom: 40px;
   }
@@ -36,51 +39,73 @@
 
 .carousel-right {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 35%;
+  align-items: flex-end;
+  width: 40%;
+  flex-direction: row-reverse;
 }
 
-.carousel-right .carousel-image {
-  width: 100%;
+
+.person-group {
+  display: flex;
+  width: 322px;
+  height: 378px;
+  position: relative;
+}
+
+.carousel-image {
   height: auto;
-  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: -30px;
+}
+
+.person {
+  width: 322px;
+  height: 378px;
+  object-fit: cover;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .person-info {
-  text-align: center;
+  width: 153px;
+  text-align: right;
   margin-top: 15px;
+  padding-bottom: 5px;
 }
 
 .person-info h4 {
-  font-size: 24px;
-  font-weight: bold;
+  color: #1E1E1E;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  padding-bottom: 5px;
 }
 
 .person-info p {
-  font-size: 18px;
-  color: #666;
+  color: #1E1E1E;
+  text-align: right;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
 }
 
 .pagination {
   display: flex;
   justify-content: start;
   align-items: center;
-  //margin-top: 20px;
+
 }
 
 .pagination button {
   background-color: white;
   border: none;
-  //padding: 10px 20px;
   cursor: pointer;
-  //margin: 0 10px;
 }
-
-//.pagination span {
-//  font-size: 18px;
-//  font-weight: bold;
-//}
 
 .swiper-button-next, .swiper-button-prev {
   display: none;
@@ -91,7 +116,7 @@
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 24.2px */
+  line-height: 110%;
 }
 
 .swiper_text {
@@ -99,7 +124,7 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%; /* 19.5px */
+  line-height: 130%;
   margin-top: 15px;
   margin-bottom: 40px;
 }
@@ -110,5 +135,33 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 130%; /* 19.5px */
+  line-height: 130%;
+}
+
+@media (max-width: 1190px) {
+
+  .carousel-container {
+    width: 80%;
+    flex-direction: column;
+  }
+  .carousel-right {
+    overflow: hidden;
+  width: 30%;
+
+}
+
+  .carousel-left {
+    width: 80%;
+
+    .swiper {
+      width: 80%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 80%;
+  }
 }

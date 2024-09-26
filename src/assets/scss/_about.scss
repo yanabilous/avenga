@@ -1,7 +1,8 @@
 .about {
-background: #1E1E1E; /* Чорний фон */
-  color: #fff; /* Білий текст */
-  padding: 50px 0; /* Відступи зверху та знизу */
+  background: url('../images/bg.png') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 50px 0;
   display: flex;
   padding-bottom: 162px;
   justify-content: center;
@@ -78,10 +79,7 @@ background: #1E1E1E; /* Чорний фон */
         max-width: 100%;
         color: #FFF;
         font-size: 14px;
-        font-style: normal;
         font-weight: 600;
-        line-height: normal;
-        //text-align: center;
         border-radius: 50px;
         background: #5646CC;
         padding: 10px 30px;
@@ -92,14 +90,67 @@ background: #1E1E1E; /* Чорний фон */
       content: "";
       position: absolute;
       width: 245px;
-      height: 32px; /* Висота лінії між картками */
-      border: 2px solid #5646CC; /* Колір та ширина бордера */
-      //border-right: none;
+      height: 32px;
+      border: 2px solid #5646CC;
       border-bottom: none;
       bottom: -34px;
       left: 160px;
-      //right: -35px; /* Відступ для з'єднання з іншою карткою */
-      transform: rotate(180deg); /* Напівквадрат */
+      transform: rotate(180deg);
     }
   }
 }
+
+
+@media (max-width: 1200px) {
+  .about {
+    overflow: hidden;
+    padding: 30px 10px;
+    padding-bottom: 100px;
+
+    .block__title {
+      text-align: center;
+      font-size: 36px;
+    }
+
+    .block__description {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .block__flex {
+      margin: 0 auto;
+      flex-direction: column;
+      width: 80%;
+      gap: 15px;
+    }
+
+    .card {
+      width: 100%;
+      padding: 15px;
+
+      &__title {
+        font-size: 12px;
+      }
+
+      &__deskription {
+        font-size: 18px;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+
+      .card-separator {
+        bottom: -50px;
+        left: 50%;
+        transform: translate(-50%, 20px);
+      }
+
+      &:not(:last-child)::after {
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+      }
+    }
+  }
+}
+

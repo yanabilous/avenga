@@ -2,8 +2,6 @@ import React from "react";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 
-
-// Валідація форми за допомогою Yup
 const validationSchema = Yup.object({
   fullName: Yup.string().required("Full name is required"),
   email: Yup.string().email("Invalid email address").required("Email address is required"),

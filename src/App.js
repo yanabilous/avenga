@@ -12,24 +12,42 @@ import Reviews from "./components/Reviews";
 import Questions from "./components/Questions";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
-
+import {Element} from "react-scroll";
 
 function App() {
   return (
     <div className="App">
-     <Header/>
-      <Services/>
-      <Industries/>
-      <Home/>
-      <About/>
-      <WeDo/>
-      <Opting/>
-      <Technologies/>
-      <Partnership/>
-      <Blog/>
-      <Reviews/>
-      <Questions/>
-      <Form/>
+      <Header/>
+      <Element name="home">
+        <Services/>
+        <Industries/>
+      </Element>
+      <Element name="services">
+        <Home/>
+        <About/>
+      </Element>
+      <Element name="industries">
+        <WeDo/>
+        <Opting/>
+      </Element>
+      <Element name="about">
+        <Technologies/>
+      </Element>
+      <Element name="technologies">
+        <Partnership/>
+      </Element>
+      <Element name="blog">
+        <Blog/>
+      </Element>
+      <Element name="reviews">
+        <Reviews/>
+      </Element>
+      <Element name="career">
+        <Questions/>
+      </Element>
+      <Element name="contact">
+        <Form/>
+      </Element>
       <Footer/>
     </div>
   );

@@ -10,19 +10,45 @@
   &__title {
     color: #FFF;
     font-size: 50px;
-    font-style: normal;
     font-weight: 800;
-    line-height: 110%; /* 55px */
   }
-  &__image-group{
+
+  &__image-group {
     display: flex;
     margin-top: 30px;
     gap: 20px;
-
-
   }
-  &__image{
-        width: 224px;
-height: 120px;
+
+  &__image {
+    width: 224px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .partnership {
+    overflow: hidden;
+    &__image-container {
+      width: 100%;
+      padding: 40px 20px;
+    }
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__image-group {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    &__image {
+      width: 80%;
+      max-width: 224px;
+      height: auto;
+      margin-bottom: 15px;
+    }
   }
 }

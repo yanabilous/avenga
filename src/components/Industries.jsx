@@ -1,7 +1,6 @@
-
 import trov from '../assets/images/trov.png';
 import instem from '../assets/images/instem.png';
-import opel from '../assets/images/opel2.png';
+import opel from '../assets/images/opel3.png';
 import uma from '../assets/images/uma.png';
 import m3 from '../assets/images/m3.png';
 const Industries = () => {
