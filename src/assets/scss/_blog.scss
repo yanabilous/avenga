@@ -1,0 +1,15 @@
+.carousel-full{
+  width: 1200px;
+  &__title{
+    padding-bottom: 30px;
+  }
+  .pagination{
+    display: flex;
+    justify-content: center;
+  }
+}
+.card-group{
+  display: flex;
+  width: 1200px;
+  gap: 20px;
+}

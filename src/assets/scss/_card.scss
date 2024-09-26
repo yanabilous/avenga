@@ -1,0 +1,77 @@
+.card {
+  width: 387px;
+  display: flex;
+  flex-direction: column;
+  //padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 20px;
+    color: #5646CC;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    background: rgba(86, 70, 204, 0.20);
+    height: 40px;
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  &__subtitle {
+    color: #1E1E1E;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 20px;
+  }
+
+  &__text-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    color: #1E1E1E;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 130%;
+    //max-height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; /* Додаємо padding до анімації */
+  }
+
+  &__text--expanded {
+    max-height: 500px; /* Тут значення більше, щоб побачити весь текст, або використовувати динамічну висоту */
+    padding: 10px 0; /* Показує відступ, коли текст відкритий */
+  }
+
+  &__actions {
+    margin-top: auto;
+  }
+
+  &__button {
+    background: none;
+    color: #5646CC;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    svg{
+       margin-left: 10px;
+    }
+  }
+}

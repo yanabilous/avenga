@@ -1,0 +1,14 @@
+.card-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 80px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+  }
+}

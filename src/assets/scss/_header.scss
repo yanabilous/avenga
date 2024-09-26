@@ -1,0 +1,68 @@
+.border{
+    border-bottom: 1px solid #1E1E1E26;
+}
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 1200px;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    .menu__list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .menu__item {
+      cursor: pointer;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .menu__select {
+      select {
+        padding: 5px;
+        font-size: 14px;
+        border: none; /* Прибираємо бордер */
+        background-color: transparent; /* Робимо фон прозорим для більш чистого вигляду */
+        outline: none; /* Прибираємо рамку при фокусі */
+        //appearance: none; /* Прибираємо стандартний вигляд браузера (для деяких браузерів) */
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__search {
+    margin-left: 20px;
+    position: relative;
+
+    .search__icon {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+    .search__input {
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+}

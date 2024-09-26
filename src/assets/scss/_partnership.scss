@@ -1,0 +1,28 @@
+.partnership {
+  background: #5646CC;
+
+  &__image-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+
+  &__title {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%; /* 55px */
+  }
+  &__image-group{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+
+
+  }
+  &__image{
+        width: 224px;
+height: 120px;
+  }
+}

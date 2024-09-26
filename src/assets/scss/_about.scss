@@ -1,0 +1,105 @@
+.about {
+background: #1E1E1E; /* Чорний фон */
+  color: #fff; /* Білий текст */
+  padding: 50px 0; /* Відступи зверху та знизу */
+  display: flex;
+  padding-bottom: 162px;
+  justify-content: center;
+
+  &__container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .block__title {
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 110%;
+  }
+
+  .block__description {
+    color: #FFF;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+
+  .block__flex {
+    width: 1200px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #FFF;
+    position: relative;
+
+    &__title {
+      display: inline-flex;
+      align-items: center;
+      justify-content: start;
+      color: #5646CC;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &__deskription {
+      color: #1E1E1E;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 110%;
+    }
+
+    &__text {
+      color: #1E1E1E;
+      font-size: 15px;
+      line-height: 130%;
+    }
+
+    .card-separator {
+      width: 245px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: -65px;
+      left: 160px;
+      transform: translateY(20px);
+
+      .separator-text {
+        max-width: 100%;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        //text-align: center;
+        border-radius: 50px;
+        background: #5646CC;
+        padding: 10px 30px;
+      }
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 245px;
+      height: 32px; /* Висота лінії між картками */
+      border: 2px solid #5646CC; /* Колір та ширина бордера */
+      //border-right: none;
+      border-bottom: none;
+      bottom: -34px;
+      left: 160px;
+      //right: -35px; /* Відступ для з'єднання з іншою карткою */
+      transform: rotate(180deg); /* Напівквадрат */
+    }
+  }
+}
