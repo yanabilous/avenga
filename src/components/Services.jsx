@@ -13,7 +13,7 @@ const Services = () => {
   };
 
   return (
-    <div className='services'>
+    <div className="services">
       <div className="services__header">
         <span>Service offerings </span> <p>&nbsp; / Technology consulting services</p>
       </div>
@@ -68,8 +68,33 @@ const Services = () => {
                 <button className="popup__button">Reject All</button>
               </div>
               <div className="popup__links">
-                <a href="#">Legal Notice</a>
-                <a href="#">Data protection notice</a>
+                <button className="a" style={{
+                  background: "none",
+                  border: "none",
+                  textDecoration: "underline",
+                  cursor: "pointer", color: "#5646CC",
+                  fontFamily: "Prompt",
+                  fontSize: "15px",
+                  fontStyle: "normal",
+                  fontWeight: "400"
+                }}>
+                  Legal Notice
+                </button>
+                <button className="a" style={{
+                  background: "none",
+                  border: "none",
+                  textDecoration: "underline",
+                  cursor: "pointer", color: "#5646CC",
+                  fontFamily: "Prompt",
+                  fontSize: "15px",
+                  fontStyle: "normal",
+                  fontWeight: "400"
+                }}>
+                  Data protection notice
+                </button>
+
+                {/*<a href="#">Legal Notice</a>*/}
+                {/*<a href="#">Data protection notice</a>*/}
               </div>
             </div>
           </div>
