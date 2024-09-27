@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 956px) {
   .industries__image-container {
     align-items: center;
     flex-direction: column;
@@ -28,7 +28,7 @@
 
   .industries__image {
     object-fit: cover;
-    width: 30%;
+    width: auto;
     height: 50px;
   }
 }
